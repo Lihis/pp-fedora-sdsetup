@@ -46,7 +46,7 @@ EOF
     infecho "Image partitioned!"
 
     infecho "Mounting the image to ${PP_IMAGE}..."
-    losetup "${PP_IMAGE}" fedora.img
+    losetup "${PP_IMAGE}" "${OUT_NAME}"
     partprobe -s "${PP_IMAGE}"
 
     infecho "Beginning filesystem creation..."
